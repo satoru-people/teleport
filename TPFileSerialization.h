@@ -29,6 +29,11 @@ extern NSString * TPFileArchiverTypeKey;
     NSFileHandle * _readFileHandle;
 }
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
 - (instancetype) initForReadingFilesAtPaths:(NSArray*)paths delegate:(id<TPFileArchiverDelegate>)delegate NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic, readonly, copy) NSArray *representedFiles;
@@ -45,6 +50,11 @@ extern NSString * TPFileArchiverTypeKey;
     NSFileHandle * _writeFileHandle;    
 }
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
 - (instancetype) initForWritingAtPath:(NSString*)path NS_DESIGNATED_INITIALIZER;
 
 - (void)startWriting;

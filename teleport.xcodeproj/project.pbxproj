@@ -7,10 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DAD932D1E984E2600CE1C95 /* TPHostSnapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A777B8000832B65B00C4D824 /* TPHostSnapping.m */; };
+		4DAD932E1E984E2600CE1C95 /* TPPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A793B81908AACC3B0078CAA7 /* TPPreferencesManager.m */; };
+		4DAD932F1E984E2600CE1C95 /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C048D0E13287D00755C6D /* PTHotKey.m */; };
+		4DAD93301E984E2600CE1C95 /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C048F0E13287D00755C6D /* PTHotKeyCenter.m */; };
+		4DAD93311E984E2600CE1C95 /* PTKeyBroadcaster.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C04910E13287D00755C6D /* PTKeyBroadcaster.m */; };
+		4DAD93321E984E2600CE1C95 /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C04930E13287D00755C6D /* PTKeyCodeTranslator.m */; };
+		4DAD93331E984E2600CE1C95 /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C04950E13287D00755C6D /* PTKeyCombo.m */; };
+		4DAD93341E984E2600CE1C95 /* PTKeyComboPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C04970E13287D00755C6D /* PTKeyComboPanel.m */; };
+		4DAD93351E984E2600CE1C95 /* TPScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A7614BED0FE850210043C401 /* TPScreen.m */; };
+		4DAD93361E984E2600CE1C95 /* TPHost.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF16059F4AE900E67CB3 /* TPHost.m */; };
+		4DAD93371E984E2600CE1C95 /* TPLocalHost.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6ADCD05EEB223001D7D35 /* TPLocalHost.m */; };
+		4DAD93381E984E2600CE1C95 /* TPRemoteHost.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6ADD305EEB234001D7D35 /* TPRemoteHost.m */; };
+		4DAD93391E984E2600CE1C95 /* TPHostAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D173350F535F0E00CC6946 /* TPHostAnimationController.m */; };
+		4DAD933A1E984E2600CE1C95 /* TPMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF28059F4B1300E67CB3 /* TPMainController.m */; };
+		4DAD933B1E984E2600CE1C95 /* TPConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A75752D205ADF9B900D78303 /* TPConnectionController.m */; };
+		4DAD933C1E984E2600CE1C95 /* TPClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF2A059F4B1300E67CB3 /* TPClientController.m */; };
+		4DAD933D1E984E2600CE1C95 /* TPServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF2E059F4B1300E67CB3 /* TPServerController.m */; };
+		4DAD933E1E984E2600CE1C95 /* TPNetworkConfigurationWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A7697D740DB25CCE0037F0A5 /* TPNetworkConfigurationWatcher.m */; };
+		4DAD933F1E984E2600CE1C95 /* TPHostsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A700510607AD3BAB0086D029 /* TPHostsManager.m */; };
+		4DAD93401E984E2600CE1C95 /* TPApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A744D58105FBE08E0011E56C /* TPApplication.m */; };
+		4DAD93411E984E2600CE1C95 /* TPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A736CF210923A4420008AB32 /* TPUtils.m */; };
+		4DAD93421E984E2600CE1C95 /* TPBonjourController.m in Sources */ = {isa = PBXBuildFile; fileRef = A700510A07AD3C5C0086D029 /* TPBonjourController.m */; };
+		4DAD93431E984E2600CE1C95 /* TPAuthenticationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7853BE109E4967C005C3446 /* TPAuthenticationManager.m */; };
+		4DAD93441E984E2600CE1C95 /* TPAuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A7853BE409E4967C005C3446 /* TPAuthenticationRequest.m */; };
+		4DAD93451E984E2600CE1C95 /* TPConnectionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A79D9D3F09AEA25F00DCE620 /* TPConnectionsManager.m */; };
+		4DAD93461E984E2600CE1C95 /* TPNetworkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A760369D05A0826D00D20845 /* TPNetworkConnection.m */; };
+		4DAD93471E984E2600CE1C95 /* TPUDPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A73510E605A65AA90049E8CD /* TPUDPSocket.m */; };
+		4DAD93481E984E2600CE1C95 /* TPTCPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A75752B505ADE74000D78303 /* TPTCPSocket.m */; };
+		4DAD93491E984E2600CE1C95 /* TPTCPSecureSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A78539B709E48D9A005C3446 /* TPTCPSecureSocket.m */; };
+		4DAD934A1E984E2600CE1C95 /* TPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF2C059F4B1300E67CB3 /* TPMessage.m */; };
+		4DAD934B1E984E2600CE1C95 /* TPTransfersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A79ED91A08959FAC00DC4A6A /* TPTransfersManager.m */; };
+		4DAD934C1E984E2600CE1C95 /* TPTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = A745F8E107C00C5F00B295FD /* TPTransfer.m */; };
+		4DAD934D1E984E2600CE1C95 /* TPPasteboardTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = A745F90E07C0389600B295FD /* TPPasteboardTransfer.m */; };
+		4DAD934E1E984E2600CE1C95 /* TPFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = A745F91E07C038E000B295FD /* TPFileTransfer.m */; };
+		4DAD934F1E984E2600CE1C95 /* TPFileSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A7609655107ED026008572E5 /* TPFileSerialization.m */; };
+		4DAD93501E984E2600CE1C95 /* TPBackgroundImageTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = A71EA8C70A12688400805CC6 /* TPBackgroundImageTransfer.m */; };
+		4DAD93511E984E2600CE1C95 /* TPEventsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78569FD0921719100301B93 /* TPEventsController.m */; };
+		4DAD93521E984E2600CE1C95 /* TPRemoteOperationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DEEA059F4AA100E67CB3 /* TPRemoteOperationsController.m */; };
+		4DAD93531E984E2600CE1C95 /* TPEventTapsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7856A27092171C300301B93 /* TPEventTapsController.m */; };
+		4DAD93541E984E2600CE1C95 /* TPDirectEventTapsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A8194A0C60030700DE5CD4 /* TPDirectEventTapsController.m */; };
+		4DAD93551E984E2600CE1C95 /* TPHotBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF1C059F4AF600E67CB3 /* TPHotBorder.m */; };
+		4DAD93561E984E2600CE1C95 /* TPHotBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B799E607B8304C00C717E7 /* TPHotBorderView.m */; };
+		4DAD93571E984E2600CE1C95 /* TPBezelController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EDD4E0897D69700DC4A6A /* TPBezelController.m */; };
+		4DAD93581E984E2600CE1C95 /* TPBezelView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DEE6059F4AA100E67CB3 /* TPBezelView.m */; };
+		4DAD93591E984E2600CE1C95 /* TPBezelWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DEE8059F4AA100E67CB3 /* TPBezelWindow.m */; };
+		4DAD935A1E984E2600CE1C95 /* TPStatusItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DD0BDF083D5F9E00DD477C /* TPStatusItemController.m */; };
+		4DAD935B1E984E2600CE1C95 /* TPBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EF8B0505AB6CA900E9BC56 /* TPBezierPath.m */; };
+		4DAD935C1E984E2600CE1C95 /* TPTestsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78569330921675800301B93 /* TPTestsController.m */; };
+		4DAD935D1E984E2600CE1C95 /* TPFakeHostsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B08FAA0DCA10A3008CAFF2 /* TPFakeHostsGenerator.m */; };
+		4DAD935E1E984E2600CE1C95 /* TPPreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = F506C03D013D9D7901CA16C8 /* TPPreferencePane.m */; };
+		4DAD935F1E984E2600CE1C95 /* TPTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E475960A14DD7900DCEA57 /* TPTableView.m */; };
+		4DAD93601E984E2600CE1C95 /* TPClosingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D9BB2705C5CEB8003DD65C /* TPClosingWindow.m */; };
+		4DAD93611E984E2600CE1C95 /* TPVersionTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B5932C05F0F42000F7CA57 /* TPVersionTextField.m */; };
+		4DAD93621E984E2600CE1C95 /* TPLinkTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A7389ECC08808A29000D0DCB /* TPLinkTextField.m */; };
+		4DAD93631E984E2600CE1C95 /* TPLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6ADA305EEAE2C001D7D35 /* TPLayoutView.m */; };
+		4DAD93641E984E2600CE1C95 /* TPKeyComboView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BEF7740F8C286C00C54411 /* TPKeyComboView.m */; };
+		4DAD93651E984E2600CE1C95 /* TPOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A50B070F844F9900C5B878 /* TPOptionsController.m */; };
+		4DAD93661E984E2600CE1C95 /* TPOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D6388C0F213F6B000C5DB2 /* TPOptionsView.m */; };
+		4DAD93671E984E2600CE1C95 /* TPAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D638FC0F21446A000C5DB2 /* TPAnimationManager.m */; };
+		4DAD93681E984E2600CE1C95 /* TPLayoutHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B5934B05F17DFB00F7CA57 /* TPLayoutHostView.m */; };
+		4DAD93691E984E2600CE1C95 /* TPLayoutRemoteHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF20059F4B0500E67CB3 /* TPLayoutRemoteHostView.m */; };
+		4DAD936A1E984E2600CE1C95 /* TPLayoutLocalHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6ADDA05EEB47D001D7D35 /* TPLayoutLocalHostView.m */; };
+		4DAD936B1E984E8000CE1C95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF5E059F4C2500E67CB3 /* main.m */; };
 		A700510707AD3BAB0086D029 /* TPHostsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A700510507AD3BAB0086D029 /* TPHostsManager.h */; };
-		A700510807AD3BAB0086D029 /* TPHostsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A700510607AD3BAB0086D029 /* TPHostsManager.m */; };
 		A700510B07AD3C5C0086D029 /* TPBonjourController.h in Headers */ = {isa = PBXBuildFile; fileRef = A700510907AD3C5C0086D029 /* TPBonjourController.h */; };
-		A700510C07AD3C5C0086D029 /* TPBonjourController.m in Sources */ = {isa = PBXBuildFile; fileRef = A700510A07AD3C5C0086D029 /* TPBonjourController.m */; };
 		A702485615332CD800B9F965 /* 10.2-Jaguar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A702484A1533265000B9F965 /* 10.2-Jaguar.jpg */; };
 		A702485715332CD800B9F965 /* 10.3-Panther.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A702484B1533265000B9F965 /* 10.3-Panther.jpg */; };
 		A702485815332CD800B9F965 /* 10.4-Tiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A702484C1533265000B9F965 /* 10.4-Tiger.jpg */; };
@@ -19,140 +80,80 @@
 		A702485B15332CD800B9F965 /* 10.7-Lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A702484F1533265000B9F965 /* 10.7-Lion.jpg */; };
 		A703972A0F609EAA006B8621 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76426760E11BD9F00F60EA1 /* QuartzCore.framework */; };
 		A71221CD1159899E00DCD93B /* MultipleFiles.icns in Resources */ = {isa = PBXBuildFile; fileRef = A71221CC1159899E00DCD93B /* MultipleFiles.icns */; };
-		A715B6BA1AA191B200BC2EDE /* TPRemoteHost.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6ADD305EEB234001D7D35 /* TPRemoteHost.m */; };
 		A71E0B911AB4210E00911ACB /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A71E0B901AB4210E00911ACB /* Sparkle.framework */; };
 		A71E0B921AB4213800911ACB /* Sparkle.framework in Copy frameworks */ = {isa = PBXBuildFile; fileRef = A71E0B901AB4210E00911ACB /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A71EA8C80A12688400805CC6 /* TPBackgroundImageTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = A71EA8C60A12688400805CC6 /* TPBackgroundImageTransfer.h */; };
-		A71EA8C90A12688400805CC6 /* TPBackgroundImageTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = A71EA8C70A12688400805CC6 /* TPBackgroundImageTransfer.m */; };
 		A72A1C5A07A464ED0012563F /* TPNetworkConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = A760369C05A0826D00D20845 /* TPNetworkConnection.h */; };
-		A72A1C5B07A464EE0012563F /* TPNetworkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A760369D05A0826D00D20845 /* TPNetworkConnection.m */; };
 		A736CF220923A4420008AB32 /* TPUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = A736CF200923A4420008AB32 /* TPUtils.h */; };
-		A736CF230923A4420008AB32 /* TPUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A736CF210923A4420008AB32 /* TPUtils.m */; };
 		A743A23008B2B6CD006B9FB2 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = A7C9DF5B059F4BDA00E67CB3 /* MainMenu.nib */; };
-		A744D58305FBE08E0011E56C /* TPApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A744D58105FBE08E0011E56C /* TPApplication.m */; };
 		A744D58405FBE08E0011E56C /* TPApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = A744D58205FBE08E0011E56C /* TPApplication.h */; };
 		A745F8E207C00C5F00B295FD /* TPTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = A745F8E007C00C5F00B295FD /* TPTransfer.h */; };
-		A745F8E307C00C5F00B295FD /* TPTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = A745F8E107C00C5F00B295FD /* TPTransfer.m */; };
 		A745F90F07C0389600B295FD /* TPPasteboardTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = A745F90D07C0389600B295FD /* TPPasteboardTransfer.h */; };
-		A745F91007C0389600B295FD /* TPPasteboardTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = A745F90E07C0389600B295FD /* TPPasteboardTransfer.m */; };
 		A745F91F07C038E000B295FD /* TPFileTransfer.h in Headers */ = {isa = PBXBuildFile; fileRef = A745F91D07C038E000B295FD /* TPFileTransfer.h */; };
-		A745F92007C038E000B295FD /* TPFileTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = A745F91E07C038E000B295FD /* TPFileTransfer.m */; };
 		A746D70508B1733600CE2B89 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A746D70308B1733600CE2B89 /* Localizable.strings */; };
 		A75752B605ADE74000D78303 /* TPTCPSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = A75752B405ADE74000D78303 /* TPTCPSocket.h */; };
-		A75752B705ADE74000D78303 /* TPTCPSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A75752B505ADE74000D78303 /* TPTCPSocket.m */; };
 		A75752D305ADF9B900D78303 /* TPConnectionController.h in Headers */ = {isa = PBXBuildFile; fileRef = A75752D105ADF9B900D78303 /* TPConnectionController.h */; };
-		A75752D405ADF9B900D78303 /* TPConnectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A75752D205ADF9B900D78303 /* TPConnectionController.m */; };
 		A75ED6CC09A3FDCF00AFDD7D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A75ED6B709A3FDCF00AFDD7D /* Carbon.framework */; };
 		A7609656107ED026008572E5 /* TPFileSerialization.h in Headers */ = {isa = PBXBuildFile; fileRef = A7609654107ED026008572E5 /* TPFileSerialization.h */; };
-		A7609657107ED026008572E5 /* TPFileSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = A7609655107ED026008572E5 /* TPFileSerialization.m */; };
 		A7614BEE0FE850210043C401 /* TPScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = A7614BEC0FE850210043C401 /* TPScreen.h */; };
-		A7614BEF0FE850210043C401 /* TPScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A7614BED0FE850210043C401 /* TPScreen.m */; };
 		A7642F4A09F6DF1F00789DC0 /* TPTransfer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A7642F4909F6DF1F00789DC0 /* TPTransfer_Private.h */; };
 		A7697D710DB25C8C0037F0A5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7697D700DB25C8C0037F0A5 /* SystemConfiguration.framework */; };
 		A7697D750DB25CCE0037F0A5 /* TPNetworkConfigurationWatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A7697D730DB25CCE0037F0A5 /* TPNetworkConfigurationWatcher.h */; };
-		A7697D760DB25CCE0037F0A5 /* TPNetworkConfigurationWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A7697D740DB25CCE0037F0A5 /* TPNetworkConfigurationWatcher.m */; };
 		A76BE04905CF016600FF0EA4 /* Protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = A76BE04705CF016600FF0EA4 /* Protocol.h */; };
 		A777B8010832B65B00C4D824 /* TPHostSnapping.h in Headers */ = {isa = PBXBuildFile; fileRef = A777B7FF0832B65B00C4D824 /* TPHostSnapping.h */; };
-		A777B8020832B65B00C4D824 /* TPHostSnapping.m in Sources */ = {isa = PBXBuildFile; fileRef = A777B8000832B65B00C4D824 /* TPHostSnapping.m */; };
 		A77812120CAF331300EEC97E /* halo.png in Resources */ = {isa = PBXBuildFile; fileRef = A77812110CAF331300EEC97E /* halo.png */; };
 		A782102C05C0D10D00A555DC /* whitelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A782102B05C0D10D00A555DC /* whitelogo.png */; };
 		A78539B809E48D9A005C3446 /* TPTCPSecureSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = A78539B609E48D9A005C3446 /* TPTCPSecureSocket.h */; };
-		A78539B909E48D9A005C3446 /* TPTCPSecureSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A78539B709E48D9A005C3446 /* TPTCPSecureSocket.m */; };
-		A7853BE509E4967C005C3446 /* TPAuthenticationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7853BE109E4967C005C3446 /* TPAuthenticationManager.m */; };
 		A7853BE609E4967C005C3446 /* TPAuthenticationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A7853BE209E4967C005C3446 /* TPAuthenticationManager.h */; };
 		A7853BE709E4967C005C3446 /* TPAuthenticationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = A7853BE309E4967C005C3446 /* TPAuthenticationRequest.h */; };
-		A7853BE809E4967C005C3446 /* TPAuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A7853BE409E4967C005C3446 /* TPAuthenticationRequest.m */; };
 		A78569340921675F00301B93 /* TPTestsController.h in Headers */ = {isa = PBXBuildFile; fileRef = A78569320921675800301B93 /* TPTestsController.h */; };
-		A78569350921675F00301B93 /* TPTestsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78569330921675800301B93 /* TPTestsController.m */; };
 		A78569FE0921719100301B93 /* TPEventsController.h in Headers */ = {isa = PBXBuildFile; fileRef = A78569FC0921719100301B93 /* TPEventsController.h */; };
-		A78569FF0921719100301B93 /* TPEventsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78569FD0921719100301B93 /* TPEventsController.m */; };
 		A7856A28092171C300301B93 /* TPEventTapsController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7856A26092171C300301B93 /* TPEventTapsController.h */; };
-		A7856A29092171C300301B93 /* TPEventTapsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7856A27092171C300301B93 /* TPEventTapsController.m */; };
 		A786DB3208BE71C400BF1E8B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A786DB3108BE71C400BF1E8B /* Security.framework */; };
-		A786E22F1A19E06E00E66B43 /* TPPreferencePane.m in Sources */ = {isa = PBXBuildFile; fileRef = F506C03D013D9D7901CA16C8 /* TPPreferencePane.m */; };
-		A786E2301A19E07D00E66B43 /* TPTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E475960A14DD7900DCEA57 /* TPTableView.m */; };
-		A786E2311A19E08100E66B43 /* TPClosingWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D9BB2705C5CEB8003DD65C /* TPClosingWindow.m */; };
-		A786E2321A19E08400E66B43 /* TPVersionTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B5932C05F0F42000F7CA57 /* TPVersionTextField.m */; };
-		A786E2331A19E08700E66B43 /* TPLinkTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A7389ECC08808A29000D0DCB /* TPLinkTextField.m */; };
-		A786E2341A19E09200E66B43 /* TPLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6ADA305EEAE2C001D7D35 /* TPLayoutView.m */; };
-		A786E2351A19E09200E66B43 /* TPKeyComboView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BEF7740F8C286C00C54411 /* TPKeyComboView.m */; };
-		A786E2361A19E09200E66B43 /* TPOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A50B070F844F9900C5B878 /* TPOptionsController.m */; };
-		A786E2371A19E09200E66B43 /* TPOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D6388C0F213F6B000C5DB2 /* TPOptionsView.m */; };
-		A786E2381A19E09200E66B43 /* TPAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D638FC0F21446A000C5DB2 /* TPAnimationManager.m */; };
-		A786E2391A19E09200E66B43 /* TPLayoutHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B5934B05F17DFB00F7CA57 /* TPLayoutHostView.m */; };
-		A786E23A1A19E09200E66B43 /* TPLayoutRemoteHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF20059F4B0500E67CB3 /* TPLayoutRemoteHostView.m */; };
-		A786E23B1A19E09200E66B43 /* TPLayoutLocalHostView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6ADDA05EEB47D001D7D35 /* TPLayoutLocalHostView.m */; };
 		A786E23C1A19E0D900E66B43 /* SecurityInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7E612E609EDC0210024712F /* SecurityInterface.framework */; };
 		A788AA7C09F5BFCA00570E96 /* Lock_White.tif in Resources */ = {isa = PBXBuildFile; fileRef = A788AA7B09F5BFCA00570E96 /* Lock_White.tif */; };
 		A78C04AA0E13287D00755C6D /* PTHotKey.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C048C0E13287D00755C6D /* PTHotKey.h */; };
-		A78C04AB0E13287D00755C6D /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C048D0E13287D00755C6D /* PTHotKey.m */; };
 		A78C04AC0E13287D00755C6D /* PTHotKeyCenter.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C048E0E13287D00755C6D /* PTHotKeyCenter.h */; };
-		A78C04AD0E13287D00755C6D /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C048F0E13287D00755C6D /* PTHotKeyCenter.m */; };
 		A78C04AE0E13287D00755C6D /* PTKeyBroadcaster.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C04900E13287D00755C6D /* PTKeyBroadcaster.h */; };
-		A78C04AF0E13287D00755C6D /* PTKeyBroadcaster.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C04910E13287D00755C6D /* PTKeyBroadcaster.m */; };
 		A78C04B00E13287D00755C6D /* PTKeyCodeTranslator.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C04920E13287D00755C6D /* PTKeyCodeTranslator.h */; };
-		A78C04B10E13287D00755C6D /* PTKeyCodeTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C04930E13287D00755C6D /* PTKeyCodeTranslator.m */; };
 		A78C04B20E13287D00755C6D /* PTKeyCombo.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C04940E13287D00755C6D /* PTKeyCombo.h */; };
-		A78C04B30E13287D00755C6D /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C04950E13287D00755C6D /* PTKeyCombo.m */; };
 		A78C04B40E13287D00755C6D /* PTKeyComboPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = A78C04960E13287D00755C6D /* PTKeyComboPanel.h */; };
-		A78C04B50E13287D00755C6D /* PTKeyComboPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = A78C04970E13287D00755C6D /* PTKeyComboPanel.m */; };
 		A78FD1AB0CB31B99006AC28C /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78FD1AA0CB31B99006AC28C /* SecurityFoundation.framework */; };
 		A793B81A08AACC3B0078CAA7 /* TPPreferencesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A793B81808AACC3B0078CAA7 /* TPPreferencesManager.h */; };
-		A793B81B08AACC3B0078CAA7 /* TPPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A793B81908AACC3B0078CAA7 /* TPPreferencesManager.m */; };
 		A79D9D4009AEA25F00DCE620 /* TPConnectionsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A79D9D3E09AEA25F00DCE620 /* TPConnectionsManager.h */; };
-		A79D9D4109AEA25F00DCE620 /* TPConnectionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A79D9D3F09AEA25F00DCE620 /* TPConnectionsManager.m */; };
 		A79ED91B08959FAC00DC4A6A /* TPTransfersManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A79ED91908959FAC00DC4A6A /* TPTransfersManager.h */; };
-		A79ED91C08959FAC00DC4A6A /* TPTransfersManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A79ED91A08959FAC00DC4A6A /* TPTransfersManager.m */; };
 		A79EDD4F0897D69700DC4A6A /* TPBezelController.h in Headers */ = {isa = PBXBuildFile; fileRef = A79EDD4D0897D69700DC4A6A /* TPBezelController.h */; };
-		A79EDD500897D69700DC4A6A /* TPBezelController.m in Sources */ = {isa = PBXBuildFile; fileRef = A79EDD4E0897D69700DC4A6A /* TPBezelController.m */; };
 		A79F8E95142AAAF700ED1D19 /* KeyCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = A79F8E94142AAAF700ED1D19 /* KeyCodes.plist */; };
 		A7A8194E0C60042800DE5CD4 /* TPDirectEventTapsController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A819490C60030700DE5CD4 /* TPDirectEventTapsController.h */; };
-		A7A8194F0C60042900DE5CD4 /* TPDirectEventTapsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A8194A0C60030700DE5CD4 /* TPDirectEventTapsController.m */; };
 		A7A819520C60047D00DE5CD4 /* TPEventTapsController_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = A7A819510C60047D00DE5CD4 /* TPEventTapsController_Internal.h */; };
 		A7B08FAB0DCA10A3008CAFF2 /* TPFakeHostsGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B08FA90DCA10A3008CAFF2 /* TPFakeHostsGenerator.h */; };
-		A7B08FAC0DCA10A3008CAFF2 /* TPFakeHostsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B08FAA0DCA10A3008CAFF2 /* TPFakeHostsGenerator.m */; };
 		A7B799E707B8304C00C717E7 /* TPHotBorderView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7B799E507B8304C00C717E7 /* TPHotBorderView.h */; };
-		A7B799E807B8304C00C717E7 /* TPHotBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B799E607B8304C00C717E7 /* TPHotBorderView.m */; };
 		A7BB55E10A1BD00E007044EA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BB550E0A1BD00D007044EA /* IOKit.framework */; };
 		A7C4711C0FA903C300282EF2 /* switch-sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7C4711B0FA903C300282EF2 /* switch-sound.wav */; };
 		A7C9DED1059F4A7400E67CB3 /* common.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DECF059F4A7400E67CB3 /* common.h */; };
 		A7C9DF00059F4AA100E67CB3 /* TPBezelView.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DEE5059F4AA100E67CB3 /* TPBezelView.h */; };
-		A7C9DF01059F4AA100E67CB3 /* TPBezelView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DEE6059F4AA100E67CB3 /* TPBezelView.m */; };
 		A7C9DF02059F4AA100E67CB3 /* TPBezelWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DEE7059F4AA100E67CB3 /* TPBezelWindow.h */; };
-		A7C9DF03059F4AA100E67CB3 /* TPBezelWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DEE8059F4AA100E67CB3 /* TPBezelWindow.m */; };
 		A7C9DF04059F4AA100E67CB3 /* TPRemoteOperationsController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DEE9059F4AA100E67CB3 /* TPRemoteOperationsController.h */; };
-		A7C9DF05059F4AA100E67CB3 /* TPRemoteOperationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DEEA059F4AA100E67CB3 /* TPRemoteOperationsController.m */; };
 		A7C9DF17059F4AE900E67CB3 /* TPHost.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DF15059F4AE900E67CB3 /* TPHost.h */; };
-		A7C9DF18059F4AE900E67CB3 /* TPHost.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF16059F4AE900E67CB3 /* TPHost.m */; };
 		A7C9DF1D059F4AF600E67CB3 /* TPHotBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DF1B059F4AF600E67CB3 /* TPHotBorder.h */; };
-		A7C9DF1E059F4AF600E67CB3 /* TPHotBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF1C059F4AF600E67CB3 /* TPHotBorder.m */; };
 		A7C9DF2F059F4B1300E67CB3 /* TPMainController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DF27059F4B1300E67CB3 /* TPMainController.h */; };
-		A7C9DF30059F4B1300E67CB3 /* TPMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF28059F4B1300E67CB3 /* TPMainController.m */; };
 		A7C9DF31059F4B1300E67CB3 /* TPClientController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DF29059F4B1300E67CB3 /* TPClientController.h */; };
-		A7C9DF32059F4B1300E67CB3 /* TPClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF2A059F4B1300E67CB3 /* TPClientController.m */; };
 		A7C9DF33059F4B1300E67CB3 /* TPMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DF2B059F4B1300E67CB3 /* TPMessage.h */; };
-		A7C9DF34059F4B1300E67CB3 /* TPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF2C059F4B1300E67CB3 /* TPMessage.m */; };
 		A7C9DF35059F4B1300E67CB3 /* TPServerController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7C9DF2D059F4B1300E67CB3 /* TPServerController.h */; };
-		A7C9DF36059F4B1300E67CB3 /* TPServerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF2E059F4B1300E67CB3 /* TPServerController.m */; };
-		A7C9DF5F059F4C2500E67CB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C9DF5E059F4C2500E67CB3 /* main.m */; };
 		A7C9DF61059F4C5100E67CB3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
 		A7D173360F535F0E00CC6946 /* TPHostAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7D173340F535F0E00CC6946 /* TPHostAnimationController.h */; };
-		A7D173370F535F0E00CC6946 /* TPHostAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D173350F535F0E00CC6946 /* TPHostAnimationController.m */; };
 		A7DD0BE2083D5F9E00DD477C /* TPStatusItemController.h in Headers */ = {isa = PBXBuildFile; fileRef = A7DD0BDE083D5F9E00DD477C /* TPStatusItemController.h */; };
-		A7DD0BE3083D5F9E00DD477C /* TPStatusItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7DD0BDF083D5F9E00DD477C /* TPStatusItemController.m */; };
 		A7E61DA509F176340024712F /* teleport.icns in Resources */ = {isa = PBXBuildFile; fileRef = A7E61DA409F176340024712F /* teleport.icns */; };
 		A7E6351E083F7AD200BC143F /* menuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6351D083F7AD200BC143F /* menuicon.png */; };
 		A7E635300840CAEF00BC143F /* menuicon-white.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6352E0840CAEF00BC143F /* menuicon-white.png */; };
 		A7E635310840CAEF00BC143F /* menuicon-black.png in Resources */ = {isa = PBXBuildFile; fileRef = A7E6352F0840CAEF00BC143F /* menuicon-black.png */; };
 		A7E6ADD005EEB223001D7D35 /* TPLocalHost.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E6ADCC05EEB223001D7D35 /* TPLocalHost.h */; };
-		A7E6ADD105EEB223001D7D35 /* TPLocalHost.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6ADCD05EEB223001D7D35 /* TPLocalHost.m */; };
 		A7E6ADD605EEB234001D7D35 /* TPRemoteHost.h in Headers */ = {isa = PBXBuildFile; fileRef = A7E6ADD205EEB234001D7D35 /* TPRemoteHost.h */; };
 		A7EC1BD51A19E6CC00CDEC7B /* teleportPref.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F1E84D0CAB155000D18B0C /* teleportPref.xib */; };
 		A7EC1BD61A19E82E00CDEC7B /* icon-about.png in Resources */ = {isa = PBXBuildFile; fileRef = A70901850CD007B6006576A6 /* icon-about.png */; };
 		A7EC1BD71A19E83A00CDEC7B /* remove.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7033E250CF0AB8C004AFBEA /* remove.tiff */; };
 		A7EC1BD81A19E83D00CDEC7B /* sharedscreen.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7033F3D0CF10E6C004AFBEA /* sharedscreen.tiff */; };
 		A7EC1BD91A19E84000CDEC7B /* sharedscreen-on.tiff in Resources */ = {isa = PBXBuildFile; fileRef = A7BD4E860CF1D26B005B3BED /* sharedscreen-on.tiff */; };
-		A7EF8B0705AB6CA900E9BC56 /* TPBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = A7EF8B0505AB6CA900E9BC56 /* TPBezierPath.m */; };
 		A7EF8B0805AB6CA900E9BC56 /* TPBezierPath.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EF8B0605AB6CA900E9BC56 /* TPBezierPath.h */; };
 /* End PBXBuildFile section */
 
@@ -889,7 +890,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0830;
 				TargetAttributes = {
 					A7C9DEC8059F496500E67CB3 = {
 						DevelopmentTeam = CJN5CYF28H;
@@ -992,68 +993,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7C9DF01059F4AA100E67CB3 /* TPBezelView.m in Sources */,
-				A7C9DF03059F4AA100E67CB3 /* TPBezelWindow.m in Sources */,
-				A7C9DF05059F4AA100E67CB3 /* TPRemoteOperationsController.m in Sources */,
-				A7C9DF18059F4AE900E67CB3 /* TPHost.m in Sources */,
-				A7C9DF1E059F4AF600E67CB3 /* TPHotBorder.m in Sources */,
-				A7C9DF30059F4B1300E67CB3 /* TPMainController.m in Sources */,
-				A7C9DF32059F4B1300E67CB3 /* TPClientController.m in Sources */,
-				A7C9DF34059F4B1300E67CB3 /* TPMessage.m in Sources */,
-				A7C9DF36059F4B1300E67CB3 /* TPServerController.m in Sources */,
-				A7C9DF5F059F4C2500E67CB3 /* main.m in Sources */,
-				A7EF8B0705AB6CA900E9BC56 /* TPBezierPath.m in Sources */,
-				A75752B705ADE74000D78303 /* TPTCPSocket.m in Sources */,
-				A75752D405ADF9B900D78303 /* TPConnectionController.m in Sources */,
-				A7E6ADD105EEB223001D7D35 /* TPLocalHost.m in Sources */,
-				A744D58305FBE08E0011E56C /* TPApplication.m in Sources */,
-				A72A1C5B07A464EE0012563F /* TPNetworkConnection.m in Sources */,
-				A700510807AD3BAB0086D029 /* TPHostsManager.m in Sources */,
-				A700510C07AD3C5C0086D029 /* TPBonjourController.m in Sources */,
-				A786E2351A19E09200E66B43 /* TPKeyComboView.m in Sources */,
-				A7B799E807B8304C00C717E7 /* TPHotBorderView.m in Sources */,
-				A745F8E307C00C5F00B295FD /* TPTransfer.m in Sources */,
-				A786E2371A19E09200E66B43 /* TPOptionsView.m in Sources */,
-				A745F91007C0389600B295FD /* TPPasteboardTransfer.m in Sources */,
-				A786E2361A19E09200E66B43 /* TPOptionsController.m in Sources */,
-				A786E2311A19E08100E66B43 /* TPClosingWindow.m in Sources */,
-				A745F92007C038E000B295FD /* TPFileTransfer.m in Sources */,
-				A777B8020832B65B00C4D824 /* TPHostSnapping.m in Sources */,
-				A786E22F1A19E06E00E66B43 /* TPPreferencePane.m in Sources */,
-				A7DD0BE3083D5F9E00DD477C /* TPStatusItemController.m in Sources */,
-				A79ED91C08959FAC00DC4A6A /* TPTransfersManager.m in Sources */,
-				A79EDD500897D69700DC4A6A /* TPBezelController.m in Sources */,
-				A715B6BA1AA191B200BC2EDE /* TPRemoteHost.m in Sources */,
-				A793B81B08AACC3B0078CAA7 /* TPPreferencesManager.m in Sources */,
-				A78569350921675F00301B93 /* TPTestsController.m in Sources */,
-				A786E2341A19E09200E66B43 /* TPLayoutView.m in Sources */,
-				A786E2391A19E09200E66B43 /* TPLayoutHostView.m in Sources */,
-				A786E23B1A19E09200E66B43 /* TPLayoutLocalHostView.m in Sources */,
-				A786E2301A19E07D00E66B43 /* TPTableView.m in Sources */,
-				A78569FF0921719100301B93 /* TPEventsController.m in Sources */,
-				A7856A29092171C300301B93 /* TPEventTapsController.m in Sources */,
-				A736CF230923A4420008AB32 /* TPUtils.m in Sources */,
-				A786E2381A19E09200E66B43 /* TPAnimationManager.m in Sources */,
-				A79D9D4109AEA25F00DCE620 /* TPConnectionsManager.m in Sources */,
-				A78539B909E48D9A005C3446 /* TPTCPSecureSocket.m in Sources */,
-				A7853BE509E4967C005C3446 /* TPAuthenticationManager.m in Sources */,
-				A7853BE809E4967C005C3446 /* TPAuthenticationRequest.m in Sources */,
-				A71EA8C90A12688400805CC6 /* TPBackgroundImageTransfer.m in Sources */,
-				A786E2321A19E08400E66B43 /* TPVersionTextField.m in Sources */,
-				A7A8194F0C60042900DE5CD4 /* TPDirectEventTapsController.m in Sources */,
-				A7697D760DB25CCE0037F0A5 /* TPNetworkConfigurationWatcher.m in Sources */,
-				A7B08FAC0DCA10A3008CAFF2 /* TPFakeHostsGenerator.m in Sources */,
-				A78C04AB0E13287D00755C6D /* PTHotKey.m in Sources */,
-				A78C04AD0E13287D00755C6D /* PTHotKeyCenter.m in Sources */,
-				A78C04AF0E13287D00755C6D /* PTKeyBroadcaster.m in Sources */,
-				A78C04B10E13287D00755C6D /* PTKeyCodeTranslator.m in Sources */,
-				A786E2331A19E08700E66B43 /* TPLinkTextField.m in Sources */,
-				A78C04B30E13287D00755C6D /* PTKeyCombo.m in Sources */,
-				A786E23A1A19E09200E66B43 /* TPLayoutRemoteHostView.m in Sources */,
-				A78C04B50E13287D00755C6D /* PTKeyComboPanel.m in Sources */,
-				A7D173370F535F0E00CC6946 /* TPHostAnimationController.m in Sources */,
-				A7614BEF0FE850210043C401 /* TPScreen.m in Sources */,
-				A7609657107ED026008572E5 /* TPFileSerialization.m in Sources */,
+				4DAD932D1E984E2600CE1C95 /* TPHostSnapping.m in Sources */,
+				4DAD932E1E984E2600CE1C95 /* TPPreferencesManager.m in Sources */,
+				4DAD932F1E984E2600CE1C95 /* PTHotKey.m in Sources */,
+				4DAD93301E984E2600CE1C95 /* PTHotKeyCenter.m in Sources */,
+				4DAD93311E984E2600CE1C95 /* PTKeyBroadcaster.m in Sources */,
+				4DAD93321E984E2600CE1C95 /* PTKeyCodeTranslator.m in Sources */,
+				4DAD93331E984E2600CE1C95 /* PTKeyCombo.m in Sources */,
+				4DAD93341E984E2600CE1C95 /* PTKeyComboPanel.m in Sources */,
+				4DAD93351E984E2600CE1C95 /* TPScreen.m in Sources */,
+				4DAD93361E984E2600CE1C95 /* TPHost.m in Sources */,
+				4DAD93371E984E2600CE1C95 /* TPLocalHost.m in Sources */,
+				4DAD93381E984E2600CE1C95 /* TPRemoteHost.m in Sources */,
+				4DAD93391E984E2600CE1C95 /* TPHostAnimationController.m in Sources */,
+				4DAD933A1E984E2600CE1C95 /* TPMainController.m in Sources */,
+				4DAD933B1E984E2600CE1C95 /* TPConnectionController.m in Sources */,
+				4DAD933C1E984E2600CE1C95 /* TPClientController.m in Sources */,
+				4DAD933D1E984E2600CE1C95 /* TPServerController.m in Sources */,
+				4DAD933E1E984E2600CE1C95 /* TPNetworkConfigurationWatcher.m in Sources */,
+				4DAD933F1E984E2600CE1C95 /* TPHostsManager.m in Sources */,
+				4DAD93401E984E2600CE1C95 /* TPApplication.m in Sources */,
+				4DAD93411E984E2600CE1C95 /* TPUtils.m in Sources */,
+				4DAD93421E984E2600CE1C95 /* TPBonjourController.m in Sources */,
+				4DAD93431E984E2600CE1C95 /* TPAuthenticationManager.m in Sources */,
+				4DAD93441E984E2600CE1C95 /* TPAuthenticationRequest.m in Sources */,
+				4DAD93451E984E2600CE1C95 /* TPConnectionsManager.m in Sources */,
+				4DAD93461E984E2600CE1C95 /* TPNetworkConnection.m in Sources */,
+				4DAD93471E984E2600CE1C95 /* TPUDPSocket.m in Sources */,
+				4DAD93481E984E2600CE1C95 /* TPTCPSocket.m in Sources */,
+				4DAD93491E984E2600CE1C95 /* TPTCPSecureSocket.m in Sources */,
+				4DAD934A1E984E2600CE1C95 /* TPMessage.m in Sources */,
+				4DAD934B1E984E2600CE1C95 /* TPTransfersManager.m in Sources */,
+				4DAD934C1E984E2600CE1C95 /* TPTransfer.m in Sources */,
+				4DAD934D1E984E2600CE1C95 /* TPPasteboardTransfer.m in Sources */,
+				4DAD934E1E984E2600CE1C95 /* TPFileTransfer.m in Sources */,
+				4DAD934F1E984E2600CE1C95 /* TPFileSerialization.m in Sources */,
+				4DAD93501E984E2600CE1C95 /* TPBackgroundImageTransfer.m in Sources */,
+				4DAD93511E984E2600CE1C95 /* TPEventsController.m in Sources */,
+				4DAD93521E984E2600CE1C95 /* TPRemoteOperationsController.m in Sources */,
+				4DAD93531E984E2600CE1C95 /* TPEventTapsController.m in Sources */,
+				4DAD93541E984E2600CE1C95 /* TPDirectEventTapsController.m in Sources */,
+				4DAD93551E984E2600CE1C95 /* TPHotBorder.m in Sources */,
+				4DAD93561E984E2600CE1C95 /* TPHotBorderView.m in Sources */,
+				4DAD93571E984E2600CE1C95 /* TPBezelController.m in Sources */,
+				4DAD93581E984E2600CE1C95 /* TPBezelView.m in Sources */,
+				4DAD93591E984E2600CE1C95 /* TPBezelWindow.m in Sources */,
+				4DAD935A1E984E2600CE1C95 /* TPStatusItemController.m in Sources */,
+				4DAD935B1E984E2600CE1C95 /* TPBezierPath.m in Sources */,
+				4DAD935C1E984E2600CE1C95 /* TPTestsController.m in Sources */,
+				4DAD935D1E984E2600CE1C95 /* TPFakeHostsGenerator.m in Sources */,
+				4DAD935E1E984E2600CE1C95 /* TPPreferencePane.m in Sources */,
+				4DAD935F1E984E2600CE1C95 /* TPTableView.m in Sources */,
+				4DAD93601E984E2600CE1C95 /* TPClosingWindow.m in Sources */,
+				4DAD93611E984E2600CE1C95 /* TPVersionTextField.m in Sources */,
+				4DAD93621E984E2600CE1C95 /* TPLinkTextField.m in Sources */,
+				4DAD93631E984E2600CE1C95 /* TPLayoutView.m in Sources */,
+				4DAD93641E984E2600CE1C95 /* TPKeyComboView.m in Sources */,
+				4DAD93651E984E2600CE1C95 /* TPOptionsController.m in Sources */,
+				4DAD93661E984E2600CE1C95 /* TPOptionsView.m in Sources */,
+				4DAD93671E984E2600CE1C95 /* TPAnimationManager.m in Sources */,
+				4DAD93681E984E2600CE1C95 /* TPLayoutHostView.m in Sources */,
+				4DAD93691E984E2600CE1C95 /* TPLayoutRemoteHostView.m in Sources */,
+				4DAD936A1E984E2600CE1C95 /* TPLayoutLocalHostView.m in Sources */,
+				4DAD936B1E984E8000CE1C95 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1104,6 +1106,7 @@
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abyssoft.teleport;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -1125,6 +1128,7 @@
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abyssoft.teleport;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -1133,15 +1137,32 @@
 		A729279008564D7C00518F7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG_BUILD=0";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};
@@ -1150,16 +1171,34 @@
 		A729279108564D7C00518F7E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG_BUILD=1";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -1182,6 +1221,7 @@
 				INFOPLIST_FILE = Info.plist;
 				OTHER_CODE_SIGN_FLAGS = "";
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.abyssoft.teleport;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -1190,9 +1230,21 @@
 		A751657609314763008F278D /* Tests */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1200,9 +1252,14 @@
 					"RUN_TESTS=1",
 				);
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				SDKROOT = macosx;
 			};

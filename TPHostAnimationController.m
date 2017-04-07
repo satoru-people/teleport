@@ -39,6 +39,8 @@
 
 @interface TPEffectsWindow : NSWindow
 
+- (instancetype)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)style backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag NS_DESIGNATED_INITIALIZER;
+
 - (instancetype) initWithFrame:(NSRect)frame NS_DESIGNATED_INITIALIZER;
 @property (nonatomic, readonly, strong) CALayer *effectsLayer;
 
@@ -64,6 +66,11 @@
 	}
 	
 	return self;
+}
+
+- (instancetype)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)style backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
+{
+	return [super initWithContentRect:contentRect styleMask:style backing:bufferingType defer:flag];
 }
 
 - (void)close
@@ -366,6 +373,11 @@ static TPHostAnimationController* _controller = nil;
 @end
 
 @implementation TPHostPlacementIndicator
+
+- (instancetype)init
+{
+	return [super init];
+}
 
 - (instancetype) initWithHost:(TPRemoteHost*)remoteHost
 {

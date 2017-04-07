@@ -50,6 +50,15 @@
 	return self;
 }
 
+- (nullable instancetype)initWithCoder:(NSCoder *)coder
+{
+	return [super initWithCoder: coder];
+}
+
+- (instancetype)initWithFrame:(NSRect)frameRect
+{
+	return [super initWithFrame: frameRect];
+}
 
 - (TPLayoutHostView*)hostView
 {
@@ -161,6 +170,16 @@
 	else {
 		return [super defaultAnimationForKey:key];
 	}
+}
+
+- (nullable instancetype)initWithCoder:(NSCoder *)coder
+{
+	return [super initWithCoder: coder];
+}
+
+- (instancetype)initWithFrame:(NSRect)frameRect
+{
+	return [super initWithFrame: frameRect];
 }
 
 - (instancetype) initWithHost:(TPHost*)host layoutView:(TPLayoutView*)layoutView

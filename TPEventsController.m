@@ -242,7 +242,7 @@
 	if(!needed)
 		return YES;
 	
-	unsigned int keyMask = NSEventMaskFromType(tag);
+	unsigned int keyMask = (unsigned int) NSEventMaskFromType(tag); // FIX: Cast
 	DebugLog(@"keyMask: %d modifiersFlags: %d", keyMask, (int)[event modifierFlags]);
 	if(([event modifierFlags] & keyMask) != 0)
 		return YES;

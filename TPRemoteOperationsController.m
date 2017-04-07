@@ -253,7 +253,7 @@ static TPRemoteOperationsController * _remoteOperationsController = nil;
 		case NSOtherMouseDown:
 		case NSOtherMouseUp:
 		{
-			int buttonNumber = [event buttonNumber];
+			int buttonNumber = (int) [event buttonNumber]; // FIX: Cast
 			int swappedButtonNumber = NSSwapHostIntToBig(buttonNumber);
 			[eventData appendData:[NSData dataWithBytes:&swappedButtonNumber length:sizeof(int)]];
 			break;

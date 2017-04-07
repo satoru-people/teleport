@@ -22,6 +22,11 @@ static TPOptionsController * _controller = nil;
 	NSMutableSet * _allObservedKeys;
 }
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
 - (instancetype) initWithOptionsController:(TPOptionsController*)optionsController NS_DESIGNATED_INITIALIZER;
 
 - (void)willChangeAllObservedKeys;
@@ -30,6 +35,11 @@ static TPOptionsController * _controller = nil;
 @end
 
 @implementation TPLayoutOptionsProxy
+
+- (instancetype)init
+{
+	return [super init];
+}
 
 - (instancetype) initWithOptionsController:(TPOptionsController*)optionsController
 {
@@ -99,6 +109,11 @@ static TPOptionsController * _controller = nil;
 	_controller = self;
 	
 	return self;
+}
+
+- (nullable instancetype)initWithCoder:(NSCoder *)coder
+{
+	return [super initWithCoder: coder];
 }
 
 - (void)awakeFromNib

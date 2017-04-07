@@ -64,6 +64,10 @@ NSRect TPScaledRect(NSRect rect, float scale)
 	return self;
 }
 
+- (nullable instancetype)initWithCoder:(NSCoder *)coder
+{
+	return [super initWithCoder: coder];
+}
 
 - (void)awakeFromNib
 {

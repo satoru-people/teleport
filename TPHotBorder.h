@@ -41,6 +41,8 @@ typedef NS_ENUM(NSInteger, TPHotBorderState) {
 + (TPHotBorder*)hotBorderRepresentingRect:(NSRect)representedRect inRect:(NSRect)parentRect;
 + (NSRect)hotRectWithRepresentingRect:(NSRect)representedRect inRect:(NSRect)parentRect;
 
+- (instancetype)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)style backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag NS_DESIGNATED_INITIALIZER;
+
 - (instancetype) initWithRepresentingRect:(NSRect)representedRect inRect:(NSRect)parentRect NS_DESIGNATED_INITIALIZER;
 
 - (void)updateWithRepresentingRect:(NSRect)representedRect inRect:(NSRect)parentRect;

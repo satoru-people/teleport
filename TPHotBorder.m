@@ -63,6 +63,11 @@ static NSString * TPHotBorderDraggingInfoKey = @"TPHotBorderDraggingInfo";
 	return hotRect;
 }
 
+- (instancetype)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)style backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
+{
+	return self = [super initWithContentRect:contentRect styleMask:style backing:bufferingType defer:flag];
+}
+
 - (instancetype) initWithRepresentingRect:(NSRect)representedRect inRect:(NSRect)parentRect
 {
 	self = [super initWithContentRect:representedRect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];

@@ -20,5 +20,3 @@
 + (long)cocoaModifiersAsCarbonModifiers: (long)cocoaModifiers;
 
 @end
-
-NSString* PTKeyBroadcasterKeyEvent; //keys: keyCombo as PTKeyCombo

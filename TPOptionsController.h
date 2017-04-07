@@ -25,14 +25,22 @@
 	NSRect _currentScreenFrame;
 }
 
-+ (TPOptionsController*)controller;
++ (TPOptionsController*_Nullable)controller;
 
-- (void)showOptionsForHost:(TPRemoteHost*)host sharedScreenIndex:(unsigned)screenIndex fromRect:(NSRect)frame;
-- (IBAction)restoreToDefaults:(id)sender;
-- (IBAction)useAsDefaults:(id)sender;
-- (IBAction)closeOptions:(id)sender;
+- (instancetype _Nonnull )init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
 
-@property (nonatomic, readonly, strong) TPRemoteHost *host;
-@property (nonatomic, readonly, strong) id hostOptions;
+- (nullable instancetype)initWithCoder:(NSCoder *_Nullable)coder NS_DESIGNATED_INITIALIZER;
+
+- (void)showOptionsForHost:(TPRemoteHost*_Nullable)host sharedScreenIndex:(unsigned)screenIndex fromRect:(NSRect)frame;
+- (IBAction)restoreToDefaults:(id _Nullable )sender;
+- (IBAction)useAsDefaults:(id _Nullable )sender;
+- (IBAction)closeOptions:(id _Nullable )sender;
+
+@property (nonatomic, readonly, strong) TPRemoteHost * _Nullable host;
+@property (nonatomic, readonly, strong) id _Nullable hostOptions;
 
 @end

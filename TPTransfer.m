@@ -481,7 +481,7 @@ NSString * TPTransferShouldEncryptKey = @"TPTransferShouldEncrypt";
 	DebugLog(@"tranfer %@ receivedData (%d) in thread %@", self, (int)[data length], [NSThread currentThread]);
 #endif
 	
-	unsigned dataLength = [data length];
+	unsigned dataLength = (unsigned) [data length];
 	[_lock lock];
 	[_data replaceBytesInRange:NSMakeRange(_receivedDataLength, dataLength) withBytes:[data bytes] length:dataLength];
 	[_lock unlock];

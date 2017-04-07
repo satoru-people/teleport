@@ -24,6 +24,11 @@
 
 @implementation TPNetworkConnection
 
+- (instancetype)init
+{
+	return [super init];
+}
+
 - (instancetype) initWithSocket:(TPTCPSocket*)socket
 {
 	self = [super init];

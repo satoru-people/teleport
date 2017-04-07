@@ -23,6 +23,12 @@
 	unsigned _currentScreenIndex;
 }
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
+
 - (instancetype) initWithHost:(TPRemoteHost*)remoteHost NS_DESIGNATED_INITIALIZER;
 - (void)setHostRect:(NSRect)hostRect localScreenIndex:(unsigned)localScreenIndex;
 

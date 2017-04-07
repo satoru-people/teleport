@@ -22,6 +22,12 @@ typedef NS_ENUM(NSInteger, TPAuthenticationResult) {
 	TPRemoteHost * _demandingHost;
 }
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
+
 - (instancetype) initWithNetworkConnection:(TPNetworkConnection*)connection demandingHost:(TPRemoteHost*)demandingHost NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic, readonly) TPAuthenticationResult ask;

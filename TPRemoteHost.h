@@ -46,24 +46,31 @@ typedef NS_OPTIONS(NSUInteger, TPHostState) {
 	TPHostState _previousHostState;
 }
 
-- (instancetype) initWithIdentifier:(NSString*)identifier address:(NSString*)address port:(int)port;
+- (instancetype _Nullable )init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
+- (nullable instancetype)initWithCoder:(NSCoder *_Nullable)coder NS_DESIGNATED_INITIALIZER;
 
-- (void)setIdentifier:(NSString*)identifier;
+- (instancetype _Nullable ) initWithIdentifier:(NSString*_Nullable)identifier address:(NSString*_Nullable)address port:(int)port;
+
+- (void)setIdentifier:(NSString*_Nullable)identifier;
 - (void)setOSVersion:(SInt32)osVersion;
 
 /* Address */
-- (void)setAddress:(NSString*)address;
+- (void)setAddress:(NSString*_Nullable)address;
 @property (nonatomic) int port;
 
 /* Certificate */
-@property (nonatomic) SecCertificateRef certificate;
-@property (nonatomic, readonly, copy) NSData *certificateData;
+@property (nonatomic) SecCertificateRef _Nullable certificate;
+@property (nonatomic, readonly, copy) NSData * _Nullable certificateData;
 @property (nonatomic, getter=isCertified, readonly) BOOL certified;
 
 /* Screens */
-@property (nonatomic, copy) NSArray *screens;
+@property (nonatomic, copy) NSArray * _Nullable screens;
 
-@property (nonatomic, readonly, strong) NSScreen *localScreen;
+@property (nonatomic, readonly, strong) NSScreen * _Nullable localScreen;
 @property (nonatomic) unsigned int localScreenIndex;
 
 - (unsigned)sharedScreenIndex;
@@ -74,9 +81,9 @@ typedef NS_OPTIONS(NSUInteger, TPHostState) {
 @property (nonatomic, readonly) NSRect fullHostRect;
 - (void)setHostPosition:(NSPoint)position;
 
-@property (nonatomic, copy) PTKeyCombo *keyCombo;
+@property (nonatomic, copy) PTKeyCombo * _Nullable keyCombo;
 
-- (void)setBackgroundImage:(NSImage*)backgroundImage;
+- (void)setBackgroundImage:(NSImage*_Nullable)backgroundImage;
 
 /* Capabilities */
 - (void)setCapabilities:(TPHostCapability)capabilities;
@@ -88,10 +95,10 @@ typedef NS_OPTIONS(NSUInteger, TPHostState) {
 - (BOOL)isInState:(TPHostState)hostState;
 
 /* Custom options */
-@property (nonatomic, readonly, strong) id options;
-- (id)optionForKey:(NSString*)key;
-- (void)setCustomOption:(id)option forKey:(NSString*)key;
-@property (nonatomic, readonly, copy) NSArray *customizedOptions;
+@property (nonatomic, readonly, strong) id _Nullable options;
+- (id _Nullable )optionForKey:(NSString*_Nullable)key;
+- (void)setCustomOption:(id _Nullable )option forKey:(NSString*_Nullable)key;
+@property (nonatomic, readonly, copy) NSArray * _Nullable customizedOptions;
 @property (nonatomic, readonly) BOOL hasCustomOptions;
 
 - (void)resetCustomOptions;
@@ -101,6 +108,6 @@ typedef NS_OPTIONS(NSUInteger, TPHostState) {
 
 @interface NSArray (TPRemoteHostAdditions)
 
-- (NSArray*)hostsWithState:(TPHostState)state;
+- (NSArray*_Nullable)hostsWithState:(TPHostState)state;
 
 @end

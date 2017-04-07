@@ -22,6 +22,12 @@
 
 + (TPConnectionsManager*)manager;
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
+
 - (void)connectToHost:(TPRemoteHost*)host withDelegate:(id)delegate infoDict:(NSDictionary*)infoDict;
 
 - (BOOL)startListeningWithDelegate:(id)delegate onPort:(int*)port;

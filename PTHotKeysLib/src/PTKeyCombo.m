@@ -24,6 +24,11 @@
 	return [[self alloc] initWithKeyCode: keyCode modifiers: modifiers];
 }
 
+- (instancetype)init
+{
+	return [super init];
+}
+
 - (instancetype)initWithKeyCode: (int)keyCode modifiers: (int)modifiers
 {
 	self = [super init];

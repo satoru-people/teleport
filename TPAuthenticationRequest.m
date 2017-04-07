@@ -16,6 +16,11 @@
 
 @implementation TPAuthenticationRequest
 
+- (instancetype)init
+{
+	return [super init];
+}
+
 - (instancetype) initWithNetworkConnection:(TPNetworkConnection*)connection demandingHost:(TPRemoteHost*)demandingHost
 {
 	self = [super init];

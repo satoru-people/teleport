@@ -27,7 +27,7 @@ static void _cfsocketCallback(CFSocketRef inCFSocketRef, CFSocketCallBackType in
 + (TPUDPSocket*)udpSocketWithPort:(int)port
 {
 	TPUDPSocket * udpSocket = [[TPUDPSocket alloc] initWithPort:port];
-	return [udpSocket autorelease];
+	return udpSocket;
 }
 
 - initWithPort:(int)port
@@ -37,7 +37,7 @@ static void _cfsocketCallback(CFSocketRef inCFSocketRef, CFSocketCallBackType in
 	/* Setup context */
 	CFSocketContext socketContext;
 	bzero(&socketContext, sizeof(socketContext));
-	socketContext.info = self;
+	socketContext.info = (__bridge void *)(self);
 	
 	/* Setup struct sockaddr */
 	struct sockaddr_in address;
@@ -68,7 +68,7 @@ static void _cfsocketCallback(CFSocketRef inCFSocketRef, CFSocketCallBackType in
 
 - (BOOL)sendData:(NSData*)data to:(CFDataRef)address
 {
-	return (CFSocketSendData(cfSocket, [host cfAddress], (CFDataRef)data, -1) == kCFSocketSuccess);
+	return (CFSocketSendData(cfSocket, address, (CFDataRef)data, -1) == kCFSocketSuccess);
 }
 
 - (void)close
@@ -80,7 +80,7 @@ static void _cfsocketCallback(CFSocketRef inCFSocketRef, CFSocketCallBackType in
 - (void)_receivedData:(CFDataRef)data from:(CFDataRef)inAddress
 {
 	if([delegate respondsToSelector:@selector(udpSocket:gotData:from:)])
-		[delegate udpSocket:self gotData:(NSData*)data from:inAddress];
+		[delegate udpSocket:self gotData:(__bridge NSData*)data from:inAddress];
 }
 
 - (NSString*)remoteAddress
@@ -93,7 +93,7 @@ static void _cfsocketCallback(CFSocketRef inCFSocketRef, CFSocketCallBackType in
 	if(nativeSocket < 0)
 		return nil;
 	
-	if(getpeername(nativeSocket, (struct sockaddr*)&address, &addressLength) < 0)
+	if(getpeername(nativeSocket, (struct sockaddr*)&address, (socklen_t*) &addressLength) < 0)
 		return nil;
 	
 	char * cIp = inet_ntoa(address.sin_addr);
@@ -108,7 +108,7 @@ _cfsocketCallback( CFSocketRef inCFSocketRef, CFSocketCallBackType inType, CFDat
 {
 	TPUDPSocket * udpSocket;
 	
-	udpSocket = (TPUDPSocket*)inContext;
+	udpSocket = (__bridge TPUDPSocket*)inContext;
 	if(!udpSocket)
 		return;
 	

@@ -331,7 +331,7 @@ static CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEvent
 			
 //			DebugLog(@"OUT string=%@ eventkbt: %d", [NSString stringWithCharacters:string length:length], keyboardType);
 			
-			UniCharCount swappedLength = NSSwapHostIntToBig(length);
+			UniCharCount swappedLength = NSSwapHostIntToBig((int)length); // FIX: Cast
 			[eventData appendData:[NSData dataWithBytes:&swappedLength length:sizeof(UniCharCount)]];
 			
 			UniCharCount i;
@@ -447,7 +447,7 @@ static CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEvent
 			UniCharCount swappedLength, length;
 			
 			[eventData _readBytes:&swappedLength withSize:sizeof(UniCharCount) atPos:&pos];
-			length = NSSwapBigIntToHost(swappedLength);
+			length = NSSwapBigIntToHost((unsigned int) swappedLength); // FIX: Cast
 			
 			UniChar string[MAX_STRING];
 			UniCharCount i;
@@ -604,7 +604,7 @@ static CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEvent
 		else {
 			CGEventSourceStateID sourceState = CGEventSourceGetSourceStateID(_eventSource);
 			CGEventFlags flags = CGEventSourceFlagsState(sourceState);
-			unsigned int keyMask = NSEventMaskFromType(tag);
+			unsigned int keyMask = (unsigned int) NSEventMaskFromType(tag); // FIX: Cast
 			return ((flags & keyMask) != 0);
 		}
 	}

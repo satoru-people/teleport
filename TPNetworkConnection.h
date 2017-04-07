@@ -28,6 +28,12 @@
 	id _delegate;
 }
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
+
 - (instancetype) initWithSocket:(TPTCPSocket*)socket NS_DESIGNATED_INITIALIZER;
 @property (nonatomic, readonly, strong) TPTCPSocket *socket;
 

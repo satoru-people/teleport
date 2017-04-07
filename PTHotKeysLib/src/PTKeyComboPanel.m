@@ -55,7 +55,7 @@ static PTKeyComboPanel* _sharedKeyComboPanel = nil;
 	[[NSNotificationCenter defaultCenter]
 		addObserver: self
 		selector: @selector( noteKeyBroadcast: )
-		name: PTKeyBroadcasterKeyEvent
+		name: @"PTKeyBroadcasterKeyEvent"
 		object: mKeyBcaster];
 }
 
@@ -79,7 +79,7 @@ static PTKeyComboPanel* _sharedKeyComboPanel = nil;
 	[self _refreshContents];
 	[[self window] center];
 	[self showWindow: self];
-	resultCode = [[NSApplication sharedApplication] runModalForWindow: [self window]];
+	resultCode = (int)[[NSApplication sharedApplication] runModalForWindow: [self window]]; // FIX: Cast
 	[self close];
 
 	return resultCode;

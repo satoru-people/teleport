@@ -45,6 +45,12 @@ typedef NS_ENUM(NSInteger, TPSocketState) {
 
 + (BOOL)wakeUpHostWithMACAddress:(IOEthernetAddress)macAddress;
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
+
 - (instancetype) initWithDelegate:(id)delegate NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic, unsafe_unretained) id delegate;

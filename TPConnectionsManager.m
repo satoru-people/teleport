@@ -42,6 +42,11 @@ static TPConnectionsManager * _connectionsManager = nil;
 	id _delegate;
 }
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
 - (instancetype) initWithConnectionToHost:(TPRemoteHost*)remoteHost delegate:(id)delegate infoDict:(NSDictionary*)infoDict NS_DESIGNATED_INITIALIZER;
 
 @property (nonatomic, readonly, strong) TPRemoteHost *host;
@@ -51,6 +56,11 @@ static TPConnectionsManager * _connectionsManager = nil;
 @end
 
 @implementation _TPSocketConnection
+
+- (instancetype)init
+{
+	return [super init];
+}
 
 - (instancetype) initWithConnectionToHost:(TPRemoteHost*)remoteHost delegate:(id)delegate infoDict:(NSDictionary*)infoDict
 {
@@ -179,7 +189,6 @@ static TPConnectionsManager * _connectionsManager = nil;
 	
 	return self;
 }
-
 
 - (void)connectToHost:(TPRemoteHost*)host withDelegate:(id)delegate infoDict:(NSDictionary*)infoDict
 {

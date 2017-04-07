@@ -34,7 +34,10 @@ extern NSRect TPScaledRect(NSRect rect, float scale);
 	NSWindow * _optionsWindow;
 }
 
-- (TPLayoutRemoteHostView*)remoteHostViewForHost:(TPRemoteHost*)host;
+- (instancetype _Nonnull )initWithFrame:(NSRect)frameRect NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder *_Nullable)coder NS_DESIGNATED_INITIALIZER;
+
+- (TPLayoutRemoteHostView*_Nullable)remoteHostViewForHost:(TPRemoteHost*_Nullable)host;
 
 - (void)updateLayout;
 

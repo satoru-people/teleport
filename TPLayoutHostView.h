@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, TPDrawMode) {NORMAL_MODE, DISABLED_MODE, SELECTED_MOD
 
 @interface NSBezierPath (TeleportAdditions)
 
-+ (void)drawRect:(NSRect)rect withGradientFrom:(NSColor*)colorStart to:(NSColor*)colorEnd;
++ (void)drawRect:(NSRect)rect withGradientFrom:(NSColor*_Nullable)colorStart to:(NSColor*_Nullable)colorEnd;
 
 @end
 
@@ -38,10 +38,12 @@ typedef NS_ENUM(NSInteger, TPDrawMode) {NORMAL_MODE, DISABLED_MODE, SELECTED_MOD
 	unsigned _screenIndex;
 }
 
-- (instancetype) initWithHostView:(TPLayoutHostView*)hostView screenIndex:(unsigned)screenIndex NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nonnull )initWithFrame:(NSRect)frameRect NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder *_Nullable)coder NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nullable ) initWithHostView:(TPLayoutHostView*_Nullable)hostView screenIndex:(unsigned)screenIndex NS_DESIGNATED_INITIALIZER;
 
-@property (nonatomic, readonly, strong) TPLayoutHostView *hostView;
-@property (nonatomic, readonly, strong) NSScreen *screen;
+@property (nonatomic, readonly, strong) TPLayoutHostView * _Nullable hostView;
+@property (nonatomic, readonly, strong) NSScreen * _Nullable screen;
 @property (nonatomic, readonly) unsigned int screenIndex;
 @property (nonatomic, getter=isMainScreen, readonly) BOOL mainScreen;
 
@@ -61,16 +63,19 @@ typedef NS_ENUM(NSInteger, TPDrawMode) {NORMAL_MODE, DISABLED_MODE, SELECTED_MOD
 
 //- (void)setRealFrame:(NSRect)frame;
 
-+ (Class)screenViewClass;
-- (instancetype) initWithHost:(TPHost*)host layoutView:(TPLayoutView*)layoutView NS_DESIGNATED_INITIALIZER;
++ (Class _Nullable )screenViewClass;
 
-@property (nonatomic, copy) NSString *hostIdentifier;
-@property (nonatomic, readonly, strong) TPHost *host;
+- (instancetype _Nonnull )initWithFrame:(NSRect)frameRect NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder *_Nullable)coder NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nullable ) initWithHost:(TPHost*_Nullable)host layoutView:(TPLayoutView*_Nullable)layoutView NS_DESIGNATED_INITIALIZER;
+
+@property (nonatomic, copy) NSString * _Nullable hostIdentifier;
+@property (nonatomic, readonly, strong) TPHost * _Nullable host;
 
 @property (nonatomic, readonly) NSRect totalFrame;
-@property (nonatomic, readonly, copy) NSArray *screenViews;
+@property (nonatomic, readonly, copy) NSArray * _Nullable screenViews;
 - (unsigned)indexOfScreenAtPoint:(NSPoint)point;
-- (TPLayoutScreenView*)screenViewAtIndex:(unsigned)index;
+- (TPLayoutScreenView*_Nullable)screenViewAtIndex:(unsigned)index;
 - (NSRect)screenFrameAtIndex:(unsigned)index;
 - (NSRect)hostFrameFromScreenFrame:(NSRect)frame atIndex:(unsigned)index;
 

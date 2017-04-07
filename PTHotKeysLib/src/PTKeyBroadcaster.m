@@ -10,17 +10,15 @@
 #import "PTKeyCombo.h"
 #import <Carbon/Carbon.h>
 
-NSString* PTKeyBroadcasterKeyEvent = @"PTKeyBroadcasterKeyEvent";
-
 @implementation PTKeyBroadcaster
 
 - (void)_bcastKeyCode: (short)keyCode modifiers: (long)modifiers
 {
-	PTKeyCombo* keyCombo = [PTKeyCombo keyComboWithKeyCode: keyCode modifiers: modifiers];
+	PTKeyCombo* keyCombo = [PTKeyCombo keyComboWithKeyCode: keyCode modifiers: (int) modifiers]; // FIX: Cast
 	NSDictionary* userInfo = @{@"keyCombo": keyCombo};
 
 	[[NSNotificationCenter defaultCenter]
-		postNotificationName: PTKeyBroadcasterKeyEvent
+		postNotificationName: @"PTKeyBroadcasterKeyEvent"
 		object: self
 		userInfo: userInfo];
 }

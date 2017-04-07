@@ -21,6 +21,12 @@
 
 + (id)clearKeyCombo;
 + (instancetype)keyComboWithKeyCode: (int)keyCode modifiers: (int)modifiers;
+
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
 - (instancetype)initWithKeyCode: (int)keyCode modifiers: (int)modifiers NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)initWithPlistRepresentation: (id)plist;

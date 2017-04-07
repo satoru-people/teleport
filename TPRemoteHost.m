@@ -26,6 +26,11 @@ NSString * TPRemoteHostCustomOptionsKey = @"customOptions";
 	TPRemoteHost * _remoteHost;
 }
 
+- (instancetype)init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
 - (instancetype) initWithRemoteHost:(TPRemoteHost*)remoteHost NS_DESIGNATED_INITIALIZER;
 
 - (void)resetCustomOptions;
@@ -33,6 +38,11 @@ NSString * TPRemoteHostCustomOptionsKey = @"customOptions";
 @end
 
 @implementation TPOptionsProxy
+
+- (instancetype)init
+{
+	return [super init];
+}
 
 - (instancetype) initWithRemoteHost:(TPRemoteHost*)remoteHost
 {
@@ -95,7 +105,7 @@ NSString * TPRemoteHostCustomOptionsKey = @"customOptions";
 	return self;
 }
 
-- (instancetype) initWithCoder:(NSCoder *)coder
+- (nullable instancetype) initWithCoder:(NSCoder *)coder
 {
 	self = [super initWithCoder:coder];
 	

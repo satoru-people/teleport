@@ -19,6 +19,11 @@ NSString * TPFileArchiverTypeKey = @"TPFileArchiverType";
 			@"LC_CTYPE": @"en_US.UTF-8"};
 }
 
+- (instancetype)init
+{
+	return [super init];
+}
+
 - (instancetype) initForReadingFilesAtPaths:(NSArray*)paths delegate:(id<TPFileArchiverDelegate>)delegate
 {
     self = [super init];
@@ -103,6 +108,11 @@ NSString * TPFileArchiverTypeKey = @"TPFileArchiverType";
 @end
 
 @implementation TPFileUnarchiver
+
+- (instancetype)init
+{
+	return [super init];
+}
 
 - (instancetype) initForWritingAtPath:(NSString*)path
 {

@@ -37,15 +37,15 @@ static inline int TPHostOSVersion(int version)
 	return version + 4;
 }
 
-extern NSString * TPHostDidUpdateNotification;
+extern NSString * _Nullable TPHostDidUpdateNotification;
 
-extern NSString * TPHostIdentifierKey;
-extern NSString * TPHostComputerNameKey;
-extern NSString * TPHostBackgroundImageDataKey;
-extern NSString * TPHostMacAddressKey;
-extern NSString * TPHostPortKey;
-extern NSString * TPHostCapabilitiesKey;
-extern NSString * TPHostOSVersionKey;
+extern NSString * _Nullable TPHostIdentifierKey;
+extern NSString * _Nullable TPHostComputerNameKey;
+extern NSString * _Nullable TPHostBackgroundImageDataKey;
+extern NSString * _Nullable TPHostMacAddressKey;
+extern NSString * _Nullable TPHostPortKey;
+extern NSString * _Nullable TPHostCapabilitiesKey;
+extern NSString * _Nullable TPHostOSVersionKey;
 
 @interface TPHost : NSObject <NSCoding>
 {
@@ -53,32 +53,39 @@ extern NSString * TPHostOSVersionKey;
 	IOEthernetAddress _macAddress;
 }
 
-@property (nonatomic, readonly, copy) NSString *identifier;
+@property (nonatomic, readonly, copy) NSString * _Nullable identifier;
 @property (nonatomic, readonly) SInt32 osVersion;
 
-@property (nonatomic, readonly, copy) NSString *address;
+@property (nonatomic, readonly, copy) NSString * _Nullable address;
 
-@property (nonatomic, copy) NSString *computerName;
+@property (nonatomic, copy) NSString * _Nullable computerName;
 
 @property (nonatomic, readonly) BOOL hasValidMACAddress;
 - (void)invalidateMACAddress;
 @property (nonatomic) IOEthernetAddress MACAddress;
 
-@property (nonatomic, readonly, copy) NSArray *screens;
-- (NSScreen*)screenAtIndex:(unsigned)screenIndex;
+@property (nonatomic, readonly, copy) NSArray * _Nullable screens;
+- (NSScreen*_Nullable)screenAtIndex:(unsigned)screenIndex;
 
-+ (NSImage*)backgroundImageFromDesktopPicture:(NSImage*)desktopPicture;
-- (NSImage*)defaultBackgroundImage;
-@property (nonatomic, readonly, copy) NSImage *backgroundImage;
-@property (nonatomic, readonly, copy) NSData *backgroundImageData;
+- (instancetype _Nullable )init
+#if NS_ENFORCE_NSOBJECT_DESIGNATED_INITIALIZER
+    NS_DESIGNATED_INITIALIZER
+#endif
+    ;
+- (nullable instancetype)initWithCoder:(NSCoder *_Nullable)coder NS_DESIGNATED_INITIALIZER;
+
++ (NSImage*_Nullable)backgroundImageFromDesktopPicture:(NSImage*_Nullable)desktopPicture;
+- (NSImage*_Nullable)defaultBackgroundImage;
+@property (nonatomic, readonly, copy) NSImage * _Nullable backgroundImage;
+@property (nonatomic, readonly, copy) NSData * _Nullable backgroundImageData;
 @property (nonatomic, readonly) BOOL hasCustomBackgroundImage;
 
 @property (nonatomic, readonly) TPHostCapability capabilities;
 - (BOOL)hasCapability:(TPHostCapability)capability;
-- (BOOL)pairWithHost:(TPHost*)host hasCapability:(TPHostCapability)capability;
+- (BOOL)pairWithHost:(TPHost*_Nullable)host hasCapability:(TPHostCapability)capability;
 
-+ (TPHost*)hostFromHostData:(NSData*)hostData;
-@property (nonatomic, readonly, copy) NSData *hostData;
++ (TPHost*_Nullable)hostFromHostData:(NSData*_Nullable)hostData;
+@property (nonatomic, readonly, copy) NSData * _Nullable hostData;
 
 - (void)notifyChange;
 
