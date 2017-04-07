@@ -36,7 +36,7 @@ static TPRemoteOperationsController * _remoteOperationsController = nil;
 #if LEGACY_BUILD
 - (id)initWithContentRect:(NSRect)contentRect styleMask:(unsigned int)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
 #else
-- (instancetype)initWithContentRect:(NSRect)contentRect styleMask:(NSUInteger)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
+- (instancetype)initWithContentRect:(NSRect)contentRect styleMask:(NSWindowStyleMask)aStyle backing:(NSBackingStoreType)bufferingType defer:(BOOL)flag
 #endif
 {
 	self = [super initWithContentRect:contentRect styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];
@@ -111,7 +111,7 @@ static TPRemoteOperationsController * _remoteOperationsController = nil;
 
 - (void)_sendModifierEventWithKeyCode:(unsigned short)keyCode
 {
-	NSEvent * modifierEvent = [NSEvent keyEventWithType:NSFlagsChanged location:NSZeroPoint modifierFlags:0 timestamp:0 windowNumber:0 context:NULL characters:NULL charactersIgnoringModifiers:NULL isARepeat:NO keyCode:keyCode];
+	NSEvent * modifierEvent = [NSEvent keyEventWithType:NSFlagsChanged location:NSZeroPoint modifierFlags:0 timestamp:0 windowNumber:0 context:nil characters:@"" charactersIgnoringModifiers:@"" isARepeat:NO keyCode:keyCode];
 	[self _sendEventToListener:modifierEvent];
 }
 
@@ -133,7 +133,7 @@ static TPRemoteOperationsController * _remoteOperationsController = nil;
 	_eventCatcherWindow = [[TPEventCatcherWindow alloc] initWithContentRect:frame styleMask:NSBorderlessWindowMask backing:NSBackingStoreBuffered defer:NO];
 	[_eventCatcherWindow setEventDelegate:self];
 	[_eventCatcherWindow makeKeyAndOrderFront:self];
-	[NSApp setEventDelegate:self];
+	[NSApp setDelegate:self];
 
 	/* Send events for currently down modifiers */
 	NSEventModifierFlags modifiers = [NSEvent modifierFlags];
@@ -151,7 +151,7 @@ static TPRemoteOperationsController * _remoteOperationsController = nil;
 
 - (void)_stopGettingEvents
 {
-	[NSApp setEventDelegate:nil];
+	[NSApp setDelegate:nil];
 	[_eventCatcherWindow close];
 	_eventCatcherWindow = nil;
 	
