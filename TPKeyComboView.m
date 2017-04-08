@@ -94,7 +94,7 @@
 			updateKeyCombo = NO;
 			break;
 		default:
-			keyCombo = [PTKeyCombo keyComboWithKeyCode:keyCode modifiers:(int)[PTKeyBroadcaster cocoaModifiersAsCarbonModifiers:[event modifierFlags]]]; // FIX: Cast
+			keyCombo = [PTKeyCombo keyComboWithKeyCode:keyCode modifiers:[PTKeyBroadcaster cocoaModifiersAsCarbonModifiers:[event modifierFlags]]];
 			
 			if(![keyCombo isValidHotKeyCombo]) {
 				NSBeep();

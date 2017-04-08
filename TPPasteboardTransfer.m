@@ -93,7 +93,7 @@ static inline BOOL TPTypeNeedsIgnoring(NSString * type)
 	NSMutableDictionary * infoDict = [[NSMutableDictionary alloc] initWithDictionary:[super infoDict]];
 	
 	[infoDict addEntriesFromDictionary:@{TPPasteboardTransferNameKey: _pasteboardName,
-		TPPasteboardTransferChangeCountKey: [NSNumber numberWithInt:(int)[[NSPasteboard pasteboardWithName:_pasteboardName] changeCount]]}]; // FIX: Cast
+		TPPasteboardTransferChangeCountKey: [NSNumber numberWithLong:[[NSPasteboard pasteboardWithName:_pasteboardName] changeCount]]}];
 	
 	return infoDict;
 }

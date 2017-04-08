@@ -236,8 +236,8 @@ static TPLocalHost * _localHost = nil;
 	if(_backgroundImages == nil)
 		[self _generateBackgroundImages];
 	
-	int index = (int) [[[TPLocalHost localHost] screens] indexOfObject:screen]; // FIX: Cast
-	if(index >= 0 && index < [_backgroundImages count])
+	unsigned long index = [[[TPLocalHost localHost] screens] indexOfObject:screen];
+	if( index < [_backgroundImages count])
 		return _backgroundImages[index];
 	else
 		return nil;

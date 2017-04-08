@@ -33,7 +33,7 @@ typedef struct CPSProcessSerNum	CPSProcessSerNum;
 /* UI */
 - (void)goFrontmost;
 - (void)leaveFrontmost;
-- (int)presentAlert:(NSAlert*)alert;
+- (NSModalResponse)presentAlert:(NSAlert*)alert;
 
 /* Version checking */
 - (void)checkVersionFromNotification:(NSNotification*)notification;

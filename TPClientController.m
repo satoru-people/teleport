@@ -653,7 +653,7 @@ void TPSleepCallback(void * refCon, io_service_t service, natural_t messageType,
 			
 			NSString * msgTitle = [NSString stringWithFormat:NSLocalizedString(@"Host \\U201C%@\\U201D rejected control.", @"Title for control failure"), [controlledHost computerName]];
 			NSAlert * alert = [NSAlert alertWithMessageText:msgTitle defaultButton:NSLocalizedString(@"Yes", nil) alternateButton:NSLocalizedString(@"No", nil) otherButton:nil informativeTextWithFormat:NSLocalizedString(@"The host has probably removed this Mac from its trusted hosts list. Do you want to ask for trust again?", nil)];
-			int result = [(TPMainController*)[NSApp delegate] presentAlert:alert];
+			NSModalResponse result = [(TPMainController*)[NSApp delegate] presentAlert:alert];
 			if(result == NSAlertDefaultReturn) {
 				controlledHost = [[TPHostsManager defaultManager] hostWithIdentifier:[controlledHost identifier]];
 				[[TPAuthenticationManager defaultManager] requestAuthenticationOnHost:controlledHost];

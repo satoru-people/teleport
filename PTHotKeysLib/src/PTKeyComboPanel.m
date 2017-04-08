@@ -70,16 +70,16 @@ static PTKeyComboPanel* _sharedKeyComboPanel = nil;
 
 #pragma mark -
 
-- (int)runModal
+- (long)runModal
 {
-	int resultCode;
+	long resultCode;
 
 	(void)[self window]; //Force us to load
 
 	[self _refreshContents];
 	[[self window] center];
 	[self showWindow: self];
-	resultCode = (int)[[NSApplication sharedApplication] runModalForWindow: [self window]]; // FIX: Cast
+	resultCode = [[NSApplication sharedApplication] runModalForWindow: [self window]];
 	[self close];
 
 	return resultCode;
@@ -87,7 +87,7 @@ static PTKeyComboPanel* _sharedKeyComboPanel = nil;
 
 - (void)runModalForHotKey: (PTHotKey*)hotKey
 {
-	int resultCode;
+	long resultCode;
 
 	[self setKeyBindingName: [hotKey name]];
 	[self setKeyCombo: [hotKey keyCombo]];

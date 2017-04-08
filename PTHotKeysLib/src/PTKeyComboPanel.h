@@ -26,7 +26,7 @@
 
 + (PTKeyComboPanel*)sharedPanel;
 
-@property (nonatomic, readonly) int runModal;
+@property (nonatomic, readonly) long runModal;
 - (void)runModalForHotKey: (PTHotKey*)hotKey;
 
 - (void)runSheeetForModalWindow: (NSWindow*)wind target: (id)obj;

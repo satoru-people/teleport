@@ -309,7 +309,7 @@ NSString * TPFileTransferDragImageLocationKey = @"TPFileTransferDragImageLocatio
 	if([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
 		NSAlert * alert = [NSAlert alertWithMessageText:NSLocalizedString(@"A file already exists with this name.", @"Title of the dialog that appears when dragging to a file that already exists in the Finder") defaultButton:NSLocalizedString(@"Unique", @"Unique button in dialog, to make a unique name of an existing filename") alternateButton:NSLocalizedString(@"Cancel", @"Generic cancel button in dialog")  otherButton:NSLocalizedString(@"Replace", @"Replace button to replace an existing file.") informativeTextWithFormat:NSLocalizedString(@"A file named \\U201C%@\\U201D already exists in \\U201C%@\\U201D. You can choose to use a unique name for the new file, replace the old file, or cancel the drop.", @"Explanation text for the dialog that appears when dragging a file to a location where a file with the same name already exists."), fileName, [destinationPath lastPathComponent]];
 		
-		int returnCode = [(TPMainController*)[NSApp delegate] presentAlert:alert];
+		NSModalResponse returnCode = [(TPMainController*)[NSApp delegate] presentAlert:alert];
 		switch(returnCode) {
 			case NSAlertDefaultReturn:
 			{

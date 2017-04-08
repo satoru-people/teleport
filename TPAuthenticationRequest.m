@@ -55,7 +55,7 @@
 											otherButton:NSLocalizedString(@"Accept and Reject Others", nil)
 							  informativeTextWithFormat:@"%@", textString];
 	
-	int result = [(TPMainController*)[NSApp delegate] presentAlert:authenticationAlert];
+	NSModalResponse result = [(TPMainController*)[NSApp delegate] presentAlert:authenticationAlert];
 	
 	switch(result) {
 		case NSAlertDefaultReturn:

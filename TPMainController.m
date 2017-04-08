@@ -289,7 +289,7 @@ static TPMainController * _mainController = nil;
 		if(![[TPLocalHost localHost] hasIdentity]) {
 			NSAlert * alert = [NSAlert alertWithMessageText:NSLocalizedString(@"Encryption requires a certificate", @"Text in dialog for certificate missing error") defaultButton:NSLocalizedString(@"Launch Assistant", @"Button title") alternateButton:NSLocalizedString(@"Disable Encryption", @"Button title") otherButton:nil informativeTextWithFormat:NSLocalizedString(@"In order to activate encryption, teleport needs a valid certificate, but couldn't find one in your Keychain.\nYou'll need to create a certificate and re-activate encryption. Note that the certificate algorithm and key size must match between the server and the clients.\n\nWould you like to launch Certificate Assistant to create a new self-signed certificate?\nRecommended settings: RSA 1024 bits, all others to default values.", @"Explanation in dialog for certificate missing error")];
 			
-			int returnCode = [self presentAlert:alert];
+			NSModalResponse returnCode = [self presentAlert:alert];
 			
 			[[TPPreferencesManager sharedPreferencesManager] setValue:@NO forKey:ENABLED_ENCRYPTION];
 			
@@ -358,10 +358,10 @@ static TPMainController * _mainController = nil;
 	}
 }
 
-- (int)presentAlert:(NSAlert*)alert
+- (NSModalResponse)presentAlert:(NSAlert*)alert
 {
 	[self goFrontmost];
-	int result = (int) [alert runModal]; // FIX: Cast
+	NSModalResponse result = [alert runModal];
 	[self leaveFrontmost];
 	return result;
 }

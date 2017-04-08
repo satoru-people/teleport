@@ -18,7 +18,7 @@
 	NSButton * _optionsButton;
 	NSButton * _unpairButton;
 	
-	unsigned _cachedBackgroundHash;
+	NSUInteger _cachedBackgroundHash;
 	NSImage * _cachedBackgroundImage;
 }
 

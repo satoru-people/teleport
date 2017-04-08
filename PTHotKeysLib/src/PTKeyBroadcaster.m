@@ -12,9 +12,9 @@
 
 @implementation PTKeyBroadcaster
 
-- (void)_bcastKeyCode: (short)keyCode modifiers: (long)modifiers
+- (void)_bcastKeyCode: (short)keyCode modifiers: (NSEventModifierFlags)modifiers
 {
-	PTKeyCombo* keyCombo = [PTKeyCombo keyComboWithKeyCode: keyCode modifiers: (int) modifiers]; // FIX: Cast
+	PTKeyCombo* keyCombo = [PTKeyCombo keyComboWithKeyCode: keyCode modifiers: modifiers];
 	NSDictionary* userInfo = @{@"keyCombo": keyCombo};
 
 	[[NSNotificationCenter defaultCenter]
@@ -26,7 +26,7 @@
 - (BOOL)_bcastEvent: (NSEvent*)event
 {
 	NSString * string = [event charactersIgnoringModifiers];
-	long modifiers = [event modifierFlags];
+	NSEventModifierFlags modifiers = [event modifierFlags];
 	
 	if([string length] > 0) {
 		unichar c = [string characterAtIndex:0];
@@ -65,7 +65,7 @@
 	return YES;
 }
 
-+ (long)cocoaModifiersAsCarbonModifiers: (long)cocoaModifiers
++ (unsigned int)cocoaModifiersAsCarbonModifiers: (NSEventModifierFlags)cocoaModifiers
 {
 	static long cocoaToCarbon[6][2] =
 	{
@@ -77,7 +77,7 @@
 		//{ NSAlphaShiftKeyMask, alphaLock }, //Ignore this?
 	};
 
-	long carbonModifiers = 0;
+	unsigned int carbonModifiers = 0;
 	int i;
 	
 	for( i = 0 ; i < 6; i++ )

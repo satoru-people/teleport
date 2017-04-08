@@ -465,20 +465,22 @@ static void _cfsocketCallback(CFSocketRef inCFSocketRef, CFSocketCallBackType in
 	CFSocketEnableCallBacks(_cfSocket, kCFSocketWriteCallBack);
 	
 	int retries = 10;
-    SInt32 size = 0;
+    ssize_t size = 0;
     CFSocketNativeHandle sock = CFSocketGetNative(_cfSocket);
     const uint8_t * dataptr = CFDataGetBytePtr(data);
-    SInt32 datalen = (SInt32) CFDataGetLength(data); // FIX: Cast
+    CFIndex datalen = CFDataGetLength(data);
 	
-	size = (SInt32) send(sock, dataptr, datalen, 0); // FIX: Cast
-	while(size < datalen && retries--) {
-		DebugLog(@"retrying send, sent size: %d", size);
+		SInt32 truncated_data = (SInt32) datalen; // FIX - this seems problematic
+	
+	size = send(sock, dataptr, truncated_data, 0);
+	while(size < truncated_data && retries--) {
+		DebugLog(@"retrying send, sent size: %ld", size);
 		if(size > 0) {
 			dataptr += size;
-			datalen -= size;
+			truncated_data -= size;
 		}
-		size = (SInt32) send(sock, dataptr, datalen, 0); // FIX: Cast
-		DebugLog(@"after retry size: %d", size);
+		size = (SInt32) send(sock, dataptr, truncated_data, 0);
+		DebugLog(@"after retry size: %ld", size);
 	}
 	
 	[_lock unlock];

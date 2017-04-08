@@ -252,7 +252,7 @@ static TPPreferencesManager * _sharedPreferencesManager = nil;
 	if(![self boolForPref:boolPref])
 		return YES;
 	
-	unsigned int keyMask = (unsigned int) NSEventMaskFromType([self intForPref:tagPref]); // FIX: Cast
+	NSEventMask keyMask = NSEventMaskFromType([self intForPref:tagPref]);
 	return (([event modifierFlags] & keyMask) != 0);
 }
 

@@ -227,12 +227,12 @@ static NSImage * _unpairImage = nil;
 	if(_cachedBackgroundImage == nil) {
 		NSData * data = [host backgroundImageData];
 		if(data != nil) {
-			_cachedBackgroundHash = (unsigned int) [data hash]; // FIX: Cast
+			_cachedBackgroundHash = [data hash];
 			_cachedBackgroundImage = [[NSImage alloc] initWithData:data];
 		}
 	}
 	else {
-		unsigned hash = (unsigned) [[host backgroundImageData] hash]; // FIX: Cast
+		NSUInteger hash = [[host backgroundImageData] hash];
 		if(hash != _cachedBackgroundHash) {
 			_cachedBackgroundImage = nil;
 			[self drawRect:rect];
