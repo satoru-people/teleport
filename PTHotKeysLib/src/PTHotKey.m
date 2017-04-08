@@ -103,7 +103,11 @@ static int HotKeyID = 0;
 
 - (void)invoke
 {
-	[mTarget performSelector: mAction withObject: self];
+	if ( ! mTarget ) return;
+	
+	IMP imp = [mTarget methodForSelector:mAction];
+	void (*func)(id, SEL) = (void *)imp;
+	func(mTarget, mAction);
 }
 
 @end
