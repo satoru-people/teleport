@@ -470,7 +470,12 @@ static void _cfsocketCallback(CFSocketRef inCFSocketRef, CFSocketCallBackType in
     const uint8_t * dataptr = CFDataGetBytePtr(data);
     CFIndex datalen = CFDataGetLength(data);
 	
-		SInt32 truncated_data = (SInt32) datalen; // FIX - this seems problematic
+		static const uint64_t bits_33_to_64 = UINT64_MAX - UINT32_MAX;
+	
+		if ( datalen & bits_33_to_64 )
+			DebugLog(@"Send size exceeds 32 bits: %ld", datalen);
+	
+		SInt32 truncated_data = (SInt32) datalen;
 	
 	size = send(sock, dataptr, truncated_data, 0);
 	while(size < truncated_data && retries--) {
