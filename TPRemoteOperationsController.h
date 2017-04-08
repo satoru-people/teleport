@@ -21,7 +21,7 @@
 
 @class TPEventCatcherWindow;
 
-@interface TPRemoteOperationsController : TPEventsController <TPEventDelegate>
+@interface TPRemoteOperationsController : TPEventsController <TPEventDelegate, NSApplicationDelegate>
 {
 	TPEventCatcherWindow * _eventCatcherWindow;
 	NSMutableSet * _modifierStates; // stores modifiers that are currently down

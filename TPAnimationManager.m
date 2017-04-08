@@ -8,8 +8,6 @@
 
 #import "TPAnimationManager.h"
 
-#import <QuartzCore/QuartzCore.h>
-
 #define FLIP_DURATION ((([[NSApp currentEvent] modifierFlags] & NSShiftKeyMask) != 0) ? 5.0 : 0.5)
 #define ROTATION_ANGLE M_PI_2
 
