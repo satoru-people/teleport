@@ -113,7 +113,11 @@ static PTKeyComboPanel* _sharedKeyComboPanel = nil;
 	if( delegate )
 	{
 		NSNumber* returnObj = @(returnCode);
-		[delegate performSelector: @selector( hotKeySheetDidEndWithReturnCode: ) withObject: returnObj];
+
+		SEL selector = NSSelectorFromString(@"hotKeySheetDidEndWithReturnCode:");
+		IMP imp = [delegate methodForSelector:selector];
+		void (*func)(id, SEL, NSNumber*) = (void *)imp;
+		func(delegate, selector, returnObj);
 	}
 }
 

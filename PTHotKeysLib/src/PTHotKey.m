@@ -104,10 +104,10 @@ static int HotKeyID = 0;
 - (void)invoke
 {
 	if ( ! mTarget ) return;
-	
+
 	IMP imp = [mTarget methodForSelector:mAction];
-	void (*func)(id, SEL) = (void *)imp;
-	func(mTarget, mAction);
+	void (*func)(id, SEL, PTHotKey*) = (void *)imp;
+	func(mTarget, mAction, self);
 }
 
 @end
