@@ -260,7 +260,9 @@ static CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEvent
 	
 	NSMutableData * eventData = [[NSMutableData alloc] init];
 	
-	CGEventType eventType = CGEventGetType(event);
+	// NX_ZOOM is added to bitflags, so we use uint32_t to avoid warning
+	// that NX_ZOOM is not in enumerated type.
+	uint32_t eventType = CGEventGetType(event);
 	CGEventType swappedEventType = NSSwapHostIntToBig(eventType);
 	
 //	DebugLog(@"postEvent: %d", eventType);
@@ -364,7 +366,10 @@ static CGEventRef eventCallback(CGEventTapProxy proxy, CGEventType type, CGEvent
 	
 	int swappedEventType;
 	[eventData _readBytes:&swappedEventType withSize:sizeof(int) atPos:&pos];
-	CGEventType eventType = NSSwapBigIntToHost(swappedEventType);
+	
+	// NX_ZOOM is added to bitflags, so we use uint32_t to avoid warning
+	// that NX_ZOOM is not in enumerated type.
+	uint32_t eventType = NSSwapBigIntToHost(swappedEventType);
 	
 	switch(eventType) {
 		case kCGEventLeftMouseDown:
