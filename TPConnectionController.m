@@ -37,6 +37,7 @@ typedef void* 	CoreDragRef;
 
 extern OSStatus CoreDragGetDragWindow(CoreDragRef drag, CGWindowID * wid);
 
+#if false
 @interface NSDragDestination : NSObject
 {
     NSWindow *_window; // non-retained window
@@ -69,6 +70,7 @@ extern OSStatus CoreDragGetDragWindow(CoreDragRef drag, CGWindowID * wid);
 }
 
 @end
+#endif
 
 @class TPClientController;
 

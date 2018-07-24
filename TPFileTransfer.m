@@ -278,14 +278,14 @@ NSString * TPFileTransferDragImageLocationKey = @"TPFileTransferDragImageLocatio
 	}
 }
 
-#if LEGACY_BUILD
-- (unsigned int)draggingSourceOperationMaskForLocal:(BOOL)isLocal
-#else
-- (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal
-#endif
-{
-	return NSDragOperationCopy;
-}
+//#if LEGACY_BUILD
+//- (unsigned int)draggingSourceOperationMaskForLocal:(BOOL)isLocal
+//#else
+//- (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)isLocal
+//#endif
+//{
+//	return NSDragOperationCopy;
+//}
 
 - (NSArray *)namesOfPromisedFilesDroppedAtDestination:(NSURL *)dropDestination
 {
@@ -294,13 +294,13 @@ NSString * TPFileTransferDragImageLocationKey = @"TPFileTransferDragImageLocatio
 	return [self _dragEndedAtPath:[dropDestination path]];
 }
 
-- (void)draggedImage:(NSImage *)anImage endedAt:(NSPoint)aPoint operation:(NSDragOperation)operation
-{
-	if(operation == NSDragOperationNone) {
-		DebugLog(@"Drop aborted");
-		[self _dragEndedAtPath:nil];
-	}
-}
+//- (void)draggedImage:(NSImage *)anImage endedAt:(NSPoint)aPoint operation:(NSDragOperation)operation
+//{
+//	if(operation == NSDragOperationNone) {
+//		DebugLog(@"Drop aborted");
+//		[self _dragEndedAtPath:nil];
+//	}
+//}
 
 - (NSString*)_filePathFromDestinationPath:(NSString*)destinationPath andFileName:(NSString*)fileName
 {
